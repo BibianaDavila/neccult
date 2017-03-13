@@ -32,7 +32,7 @@
 
 							<li class="active"><a href=""><div class="square"></div>Home</a></li>
 							<li><a href="sobre.php"><div class="square"></div>Sobre</a></li>
-							<li><a href=""><div class="square"></div>Metas</a></li>
+							<li><a href="metas.php"><div class="square"></div>Metas</a></li>
 							<li><a href=""><div class="square"></div>Notícias</a></li>
 							<li><a href=""><div class="square"></div>Contato</a></li>
 
