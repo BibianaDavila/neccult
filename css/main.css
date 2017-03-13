@@ -16,6 +16,7 @@
 body{
 	font-family: 'Lato Regular';
 	font-size: 14px;
+	background-color: #f5f5f5;
 	color: #6b6666;
 }
 @media (min-width: 1500px) {
@@ -58,4 +59,100 @@ div.square{
 }
 li.active div.square, li a:hover div.square{
 	background-color: #808080;
+}
+
+/*=== conteúdo ===*/
+.content{
+	margin-top: 120px;
+}
+
+/* carousel */
+.custom-carousel{
+	height: 350px;
+}
+
+/* setas */
+.carousel-control.left, .carousel-control.right{
+	background: transparent !important;
+}
+.arrow-icon{
+	margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+.carousel-control{
+	width: 45px !important;
+}
+
+/* itens */
+.carousel .item{
+	margin-top: 70px;
+	height: 325px;
+}
+.carousel-inner-item{
+	margin: 0px 90px;
+	height: 100%;
+}
+.carousel-bg{
+	height: 230px;
+	background-color: #999999;
+}
+.carousel-wrapper-img{
+	margin-top: -70px;
+}
+.carousel-img{
+	height: 370px;
+	margin-left: 50px;
+	box-shadow: 7px 7px 25px -5px #454343;
+	overflow: hidden;	
+}
+.carousel-img img{
+	max-height: 100%;
+}
+
+.carousel-title{
+	font-family: 'Playfair Display', serif;
+	font-size: 26px;
+	letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: -110px;
+    margin-right: 30px;
+    padding: 37px 0px 0px 0px;
+}
+.separador{
+	border-bottom: 3px solid #808080;
+	width: 60%;
+	margin: 10px auto;
+}
+.carousel-text{
+	padding: 30px 0px;
+	margin-right: 30px;
+	height: 245px;
+	color: white;
+	font-size: 18px;
+}
+.carousel-data{
+	margin-top: 10px;
+	padding: 8px 15px;
+	text-align: right;
+	font-size: 16px;
+	font-style: italic;
+	background-color: #e6e6e6;
+}
+
+/* indicadores */
+.carousel-indicators{
+	bottom: -85px;
+}
+.carousel-indicators li{
+	border-radius: 0px;
+	background-color: #c9c9c9;
+	border: 1px solid #c9c9c9;
+}
+.carousel-indicators .active{
+	background-color: #808080;
+	border-color: #c9c9c9;
 }
