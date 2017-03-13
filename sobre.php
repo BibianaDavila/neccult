@@ -34,7 +34,7 @@
 							<li class="active"><div class="square"></div>Sobre</li>
 							<li><a href="metas.php"><div class="square"></div>Metas</a></li>
 							<li><a href=""><div class="square"></div>Notícias</a></li>
-							<li><a href=""><div class="square"></div>Contato</a></li>
+							<li><a href="contato.php"><div class="square"></div>Contato</a></li>
 
 						</ul>
 					</div>

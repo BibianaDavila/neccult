@@ -30,11 +30,11 @@
 					<div class="col-md-9 text-right">
 						<ul class="custom-nav">
 
-							<li class="active"><a href=""><div class="square"></div>Home</a></li>
+							<li class="active"><div class="square"></div>Home</li>
 							<li><a href="sobre.php"><div class="square"></div>Sobre</a></li>
 							<li><a href="metas.php"><div class="square"></div>Metas</a></li>
 							<li><a href=""><div class="square"></div>Notícias</a></li>
-							<li><a href=""><div class="square"></div>Contato</a></li>
+							<li><a href="contato.php"><div class="square"></div>Contato</a></li>
 
 						</ul>
 					</div>
@@ -73,7 +73,7 @@
 	    										<!-- image -->
 	    										<div class="col-md-7">
 	    											<div class="carousel-wrapper-img">
-	    												<div class="carousel-img">
+	    												<div class="carousel-img shadow-img">
 			    											<img src="images/teste.png">
 			    										</div>
 			    									</div>
@@ -111,7 +111,7 @@
 	    										<!-- image -->
 	    										<div class="col-md-7">
 	    											<div class="carousel-wrapper-img">
-	    												<div class="carousel-img">
+	    												<div class="carousel-img shadow-img">
 			    											<img src="images/teste.png">
 			    										</div>
 			    									</div>
@@ -149,7 +149,7 @@
 	    										<!-- image -->
 	    										<div class="col-md-7">
 	    											<div class="carousel-wrapper-img">
-	    												<div class="carousel-img">
+	    												<div class="carousel-img shadow-img">
 			    											<img src="images/teste.png">
 			    										</div>
 			    									</div>
@@ -187,7 +187,7 @@
 	    										<!-- image -->
 	    										<div class="col-md-7">
 	    											<div class="carousel-wrapper-img">
-	    												<div class="carousel-img">
+	    												<div class="carousel-img shadow-img">
 			    											<img src="images/teste.png">
 			    										</div>
 			    									</div>
