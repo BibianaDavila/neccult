@@ -3,7 +3,7 @@
 class Noticia {
 
 	protected static $table = 'obec_noticias';
-	protected static $images = '../images/noticias/';
+	protected static $images = 'images/noticias/';
 	private static $conn;
 	protected $pk = 'id';
 	public $titulo;
@@ -14,19 +14,19 @@ class Noticia {
 
 
 	public static function connect(){
-		define('DB_NOME', 'obec');
-		define('DB_USUARIO', 'obec');
-		define('DB_SENHA', '4toeR5YFGNfu');
-		define('DB_HOST', 'bdlivre.ufrgs.br');
+		define('DB_NOME', 'obec_new');
+		define('DB_USUARIO', 'root');
+		define('DB_SENHA', 'cegov');
+		define('DB_HOST', 'localhost');
 
-		$conexao = mysql_connect(DB_HOST, DB_USUARIO, DB_SENHA);
-		$conexaoDb = mysql_select_db(DB_NOME, $conexao);
-		self::$conn = $conexao;
-		mysql_query('SET NAMES utf8');
+		$db = mysqli_connect(DB_HOST,DB_USUARIO,DB_SENHA,DB_NOME) or die('Error connecting to MySQL server.');
+
+		self::$conn = $db;
+		mysqli_query(self::$conn, 'SET NAMES utf8');
 	}
 
 	public static function disconnect(){
-		mysql_close(self::$conn);
+		mysqli_close(self::$conn);
 	}
 
 	public static function ImageDirectory(){
@@ -37,18 +37,18 @@ class Noticia {
 		// select * from $table where id = $id
 		self::connect();
 		$query = "SELECT * FROM ".self::$table." WHERE id = ".$id;
-		$result = mysql_query($query);
-		$obj = mysql_fetch_object($result, 'Noticia');
+		$result = mysqli_query(self::$conn, $query);
+		$obj = mysqli_fetch_object($result, 'Noticia');
 		self::disconnect();
 		return ($obj == false) ? NULL : $obj;
 	}
 
 	public static function all(){
 		self::connect();
-		$query = "SELECT * FROM ".self::$table." ORDER BY id DESC";;
-		$result = mysql_query($query);
+		$query = "SELECT * FROM ".self::$table." ORDER BY id DESC";
+		$result = mysqli_query(self::$conn, $query);
 		$allObjects = array();
-		while($obj = mysql_fetch_object($result, 'Noticia')){
+		while($obj = mysqli_fetch_object($result, 'Noticia')){
 			$allObjects[] = $obj;
 		}
 		self::disconnect();
@@ -58,9 +58,9 @@ class Noticia {
 	public static function news($limite, $offsetTeste){
 		self::connect();
 		$query = "SELECT * FROM ".self::$table." ORDER BY id DESC LIMIT ".$limite." OFFSET ".$offsetTeste;
-		$result = mysql_query($query);
+		$result = mysqli_query(self::$conn, $query);
 		$allObjects = array();
-		while($obj = mysql_fetch_object($result, 'Noticia')){
+		while($obj = mysqli_fetch_object($result, 'Noticia')){
 			$allObjects[] = $obj;
 		}
 		self::disconnect();
@@ -73,9 +73,9 @@ class Noticia {
 
 		$query = "SELECT COUNT(*) as total FROM ".self::$table;
 
-		$result = mysql_query($query);
+		$result = mysqli_query(self::$conn, $query);
 
-		$data = mysql_fetch_assoc($result);
+		$data = mysqli_fetch_assoc($result);
 
 		self::disconnect();
 		return $data['total'];
@@ -85,9 +85,9 @@ class Noticia {
 		// select * from $table where $field $comp $value
 		self::connect();
 		$query = "SELECT * FROM ".self::$table." WHERE ".$field." ".$comp." ".$value;
-		$result = mysql_query($query);
+		$result = mysqli_query(self::$conn, $query);
 		$allObjects = array();
-		while($obj = mysql_fetch_object($result, 'Noticia')){
+		while($obj = mysqli_fetch_object($result, 'Noticia')){
 			$allObjects[] = $obj;
 		}
 		self::disconnect();
@@ -124,12 +124,12 @@ public function save($img, $arq){
 		self::connect();
 		try{
 			//echo $query."<br>";
-			$result = mysql_query($query);
+			$result = mysqli_query(self::$conn, $query);
 			if($result){
-				$this->id = mysql_insert_id();
+				$this->id = mysqli_insert_id();
 				return true;
 			}else{
-				var_dump(mysql_error(self::$conn));
+				var_dump(mysqli_error(self::$conn));
 				//return false;
 			}
 		}catch(Exception $e){
@@ -137,7 +137,7 @@ public function save($img, $arq){
 			return false;
 		}
 
-		$this->id = mysql_insert_id();
+		$this->id = mysqli_insert_id();
 		//return true;
 	}
 
@@ -147,9 +147,9 @@ public function save($img, $arq){
 		$query = "DELETE FROM ".self::$table." WHERE ".$this->pk." = ".$this->id;
 		self::connect();
 		try{
-			$result = mysql_query($query);
+			$result = mysqli_query(self::$conn, $query);
 			if(!$result){
-				var_dump(mysql_error());
+				var_dump(mysqli_error());
 			}
 		}catch(Exception $e){
 			var_dump($e);
@@ -181,9 +181,9 @@ public function save($img, $arq){
 		$query = "UPDATE ".self::$table." SET $values WHERE ".$this->pk." = ".$this->id;
 		self::connect();
 		try{
-			$result = mysql_query($query);
+			$result = mysqli_query(self::$conn, $query);
 			if(!$result){
-				var_dump(mysql_error());
+				var_dump(mysqli_error());
 			}
 		}catch(Exception $e){
 			var_dump($e);
