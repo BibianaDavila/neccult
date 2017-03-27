@@ -4,10 +4,6 @@
     src: url('../fonts/Lato-Regular.ttf');
 }
 @font-face{
-    font-family: Lato Light;
-    src: url('../fonts/Lato-Light.ttf');
-}
-@font-face{
     font-family: Lato Bold;
     src: url('../fonts/Lato-Black.ttf');
 }
@@ -19,11 +15,47 @@ body{
 	background-color: #f5f5f5;
 	color: #9b9b9b;
 }
+.ellipsis {
+  overflow:hidden;
+}
+.idioma-content{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	padding: 15px 0px 15px 0px;
+	box-shadow: 0px 5px 20px #939090;
+	background-color: #f5f5f5;
+	z-index: 10;
+}
+/* seleção */
+::-moz-selection { /* Code for Firefox */
+    color: #FFF;
+    background: #66657d;
+}
+::selection {
+    color: #FFF; 
+    background: #66657d;
+}
+
+/* links */
+a{
+	color: #232153;
+	transition: .1s all ease-in;
+}
+a:hover{
+	text-decoration: none;
+	color: #a2a1ba;
+}
+a.clean{
+	color: inherit !important;
+}
+
+/* botões */
 .button{	
     font-size: 12px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    background-color: #9b9b9b;
+    background-color: #66657d;
     color: white;
     margin: 0px 8px;
     padding: 5px 10px 5px 15px;
@@ -32,27 +64,50 @@ body{
 .button:hover{
 	text-decoration: none;
 	color: white;
-	background-color: #808080;
+	background-color: #a2a1ba;
 	cursor: pointer;
+}
+
+/* imagens */
+.fluid-img{
+	max-width: 100%;
 }
 .shadow-img{
 	box-shadow: 7px 7px 25px -5px #454343;	
 }
-@media (min-width: 1500px) {
-	.container {
-		width: 1470px;
-	}
+
+/*=== paginação ===*/
+.pagination{
+	margin: 50px 0px;
+}
+.pagination li a,
+.pagination li span{
+	cursor: pointer;
+	border-radius: 0px !important;
+	border-color: #f5f5f5 !important;
+	background-color: #a5a5b6 !important;
+	color: #FFF !important;
+	transition: .2s all ease-in;
+}
+.pagination li.active a,
+.pagination li a:hover,
+.pagination li.active span,
+.pagination li span:hover{
+	background-color: #66657d !important;
 }
 
 /*=== header ===*/
 header{
-	margin-top: 50px;
+	padding: 50px 0px 100px 0px;
 }
 .logo{
 	margin-top: 20px;
 	max-width: 100%;
 }
+
+/* menu nav */
 ul.custom-nav{
+	padding: 0px;
 	font-weight: bold;
 	letter-spacing: 8px;
 	text-transform: uppercase;
@@ -70,19 +125,24 @@ ul.custom-nav li a:visited{
 }
 
 div.square{
-	transition: .2s all ease-in;
 	width: 14px;
 	height: 14px;
 	background-color: #c9c9c9;
+	transition: .2s all ease-in;
 	margin: 11px auto;
 }
-li.active div.square, li a:hover div.square{
+li.active div.square, 
+li a:hover div.square{
 	background-color: #808080;
 }
 
 /*=== conteúdo ===*/
 .content{
-	margin-top: 120px;
+	margin-bottom: 15px;
+}
+.content.center{
+	position: absolute;
+	width: 100%
 }
 
 /* carousel */
@@ -91,7 +151,8 @@ li.active div.square, li a:hover div.square{
 }
 
 /* setas */
-.carousel-control.left, .carousel-control.right{
+.carousel-control.left, 
+.carousel-control.right{
 	background: transparent !important;
 }
 .arrow-icon{
@@ -108,7 +169,7 @@ li.active div.square, li a:hover div.square{
 
 /* itens */
 .carousel .item{
-	margin-top: 70px;
+	margin-top: 110px;
 	height: 325px;
 }
 .carousel-inner-item{
@@ -116,30 +177,31 @@ li.active div.square, li a:hover div.square{
 	height: 100%;
 }
 .carousel-bg{
-	height: 230px;
-	background-color: #999999;
+	height: 155px;
+	background-color: #66657d;
 }
 .carousel-wrapper-img{
-	margin-top: -70px;
+	margin-top: -110px;
 }
 .carousel-img{
-	height: 370px;
+	height: 330px;
 	margin-left: 50px;
-	overflow: hidden;	
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
 }
-.carousel-img img{
-	max-height: 100%;
-}
-
 .carousel-title{
 	font-family: 'Playfair Display', serif;
 	font-size: 26px;
 	letter-spacing: 2px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: -110px;
-    margin-right: 30px;
-    padding: 37px 0px 0px 0px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: -150px 0px 0px 0px;
+	padding: 40px 0px 0px 0px;
+}
+.carousel-title .inner{
+	height: 3em; 
+    line-height: 1em; 
 }
 .separador{
 	border-bottom: 3px solid #808080;
@@ -147,14 +209,18 @@ li.active div.square, li a:hover div.square{
 	margin: 10px auto;
 }
 .carousel-text{
+	height: 4em;
 	padding: 30px 0px;
 	margin-right: 30px;
-	height: 245px;
+	height: 190px;
 	color: white;
-	font-size: 18px;
+	font-size: 16px;
+}
+.carousel-text .inner{
+	line-height: 1.3em;
 }
 .carousel-data{
-	margin-top: 10px;
+	margin-top: -10px;
 	padding: 8px 15px;
 	text-align: right;
 	font-size: 16px;
@@ -175,7 +241,6 @@ li.active div.square, li a:hover div.square{
 	background-color: #808080;
 	border-color: #c9c9c9;
 }
-
 .separador-vertical{
 	position: absolute;
 	display: inline-block;
@@ -183,7 +248,7 @@ li.active div.square, li a:hover div.square{
 	transform: translateY(-50%);
 	height: 175px;
 	width: 0px;
-	border: 1.5px solid #c3c4ca;
+	border: 1.5px solid #66657d;
 }
 
 /*=== página sobre ===*/
@@ -196,6 +261,7 @@ li.active div.square, li a:hover div.square{
 	font-size: 36px;
 	line-height: 36px;
 	text-transform: uppercase;
+	color: #66657d;
 }
 .about-title .small{
 	display: inline-block;
@@ -209,29 +275,58 @@ li.active div.square, li a:hover div.square{
 }
 .about-text{
 	text-align: justify;
-	padding-top: 30px;
+	padding-top: 80px;
 }
 .about-img{
 	padding: 0px 75px;
 	max-width: 95%;
 }
+.zoom{
+	display: inline-block;
+	position: relative;
+}
+		
+/* magnifying glass icon */
+.zoom:after {
+	content:'';
+	position: absolute; 
+	top: 0;
+	right: 0;
+	display: block; 
+	width: 33px; 
+	height: 33px;
+}
+.zoom img {
+	display: block;
+}
 
+.zoom img::selection { 
+	background-color: transparent; 
+}
 .links-list{
-	margin: 80px 0px 30px 0px;
+	margin: 80px 0px 80px 0px;
+	line-height: 35px;
 }
 
 /*=== página meta ===*/
+.metas-container{
+	margin-bottom: 80px;	
+}
 .metas-text{
 	display: inline-block;
 	width: 90%;
 	text-align: justify;
-	padding: 80px 50px 20px 50px;
+	padding: 0px 50px;
 }
 
 /*=== página contato ===*/
 .contact-img{
 	position: relative;
 	z-index: 2;	
+	height: 410px;
+	background-image: url('../images/contato.png');
+	background-position: center;
+	background-size: cover;
 }
 .contact-img img{
 	height: 410px;
@@ -241,7 +336,7 @@ li.active div.square, li a:hover div.square{
 	margin-left: -25px;
 	margin-top: 30px;
 	padding: 25px 25px 25px 0px;
-	background-color: #999999;
+	background-color: #66657d;
 }
 .contact-content{
 	height: 300px;
@@ -249,11 +344,277 @@ li.active div.square, li a:hover div.square{
 	color: white;
 	padding: 30px 15px 15px 40px;
 	border: 3px solid white;
-	background-color: #999999;
+	background-color: #66657d;
 }
 .social-links{
 	display: inline-block;
-	margin: 80px 0px 30px 0px;
+	margin: 80px 0px 80px 0px;
 	padding-bottom: 15px;
-	border-bottom: 3px solid #c3c4ca;
+	border-bottom: 3px solid #66657d;
+}
+.social-links img{
+	width: 40px;
+}
+/*=== notícias ===*/
+.news-content{
+	background-color: white;
+	padding: 15px;
+	margin: 15px 0px;
+}
+.news-img{
+	width: 100%;
+	height: 160px;
+	background-position: center;
+	background-size: cover;
+}
+.news-title{
+	margin: 15px 0px 10px 0px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #66657d;
+	height: 3em; 
+    line-height: 1em; 
+    overflow: hidden;
+}
+.news-text{
+	max-height: 3em; 
+    line-height: 1em; 
+    overflow: hidden;
+}
+.newsPage-text{
+	padding: 0px 25px 85px 25px;
+	text-align: justify;
+}
+.newsPage-text .title{
+	font-family: 'Lato Bold';
+	font-size: 22px;
+	text-align: left;
+	text-transform: uppercase;
+	color: #66657d;
+}
+.newsPage-text .date{
+	padding: 3px;
+	margin: 10px 0px;
+	text-align: right;
+	background-color: #e6e6e6;
+}
+
+/* controla paginação */
+.new-page{
+	display: none;
+}
+.new-page.opened{
+	display: block;
+}
+
+/*===  site responsivo =================================*/
+@media (min-width: 1500px) {
+	.container {
+		width: 1470px;
+	}
+}
+
+@media only screen and (max-width: 1499px){
+	header{
+		padding-bottom: 80px; 
+	}
+
+	/* sobre */
+	.about-title{
+		top: 190px;
+		font-size: 30px;
+	}
+	.about-title .big{
+		font-size: 35px;
+	}
+	.about-text{
+		padding-top: 0px;
+	}
+
+	/* contato */
+	.contact-img{
+		height: 320px;
+	}
+	.contact-content{
+		height: 210px;
+	}
+}
+
+@media only screen and (max-width: 1199px){
+	header{
+		padding-bottom: 50px; 
+	}
+
+	/* nav menu */
+	ul.custom-nav{
+		letter-spacing: 2px;
+	}
+	ul.custom-nav li{
+		padding-top: 5px;
+	}
+
+	/* carousel */
+	.custom-carousel{
+		height: 220px;
+	}
+	.carousel-indicators{
+		bottom: -50px;
+	}
+	.carousel .item{
+		margin-top: 75px;
+		height: 145px;
+	}
+	.carousel-bg{
+		height: 95px;
+	}
+	.carousel-wrapper-img{
+		margin-top: -75px;
+	}
+	.carousel-img{
+		height: 200px;
+	}
+	.carousel-title{
+		font-size: 15px;
+		margin-top: -115px;
+	}
+	.carousel-text{
+		font-size: 14px;
+		height: 113px;
+	}
+	.carousel-data{
+		margin-top: -2px;
+		padding: 3px 15px;
+		font-size: 12px;
+	}
+
+	/* sobre */
+	.about-text{
+		padding-top: 50px;
+	}
+}
+
+@media only screen and (max-width: 991px){
+	body{
+		font-size: 10px;
+	}
+	ul.custom-nav li{
+		padding: 10px 15px 0px 15px;
+	}
+	.fluid-img{
+		padding: 0px 25px;
+		box-shadow: none !important;
+	}
+
+	/* sobre */
+	.about-title{
+		top: 145px;
+		font-size: 22px;
+		line-height: 24px;
+	}
+	.about-title .small{
+		font-size: 15px;
+	}
+	.about-title .big{
+		font-size: 25px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	
+	/* geral */
+	.content, header{
+		min-width: 480px;
+	}
+	.shadow-img{
+		box-shadow: none;
+	}
+	ul.custom-nav{
+		margin-top: 25px;
+		text-align: center;
+	}
+	.separador-vertical{
+		display: none;
+	}
+
+	/* carousel */
+	.custom-carousel{
+		height: 295px;
+	}
+	.carousel-indicators{
+		bottom: -25px;
+	}
+	.carousel .item{
+		margin-top: 0px;
+		height: 280px;
+	}
+	.carousel-inner-item{
+		margin: 0px;
+	}
+	.carousel-bg{
+		height: 270px;
+	}
+	.carousel-wrapper-img{
+		margin-top: 0px;
+	}
+	.carousel-img{
+		margin-left: 0px;
+	}
+	.carousel-title{
+		color: white;
+		margin-top: 0px;
+		padding: 15px 15px 0px 15px;
+	}
+	.carousel-text{
+		margin-top: -10px;
+		margin-right: 0px;
+		height: 75px;
+		padding: 15px;
+	}
+	.carousel-data{
+		margin-top: 5px;
+	}
+
+	/* contato */
+	.contact-img{
+		height: 170px;
+		margin: 0px 3px;
+	}
+	.contact-container{
+		margin: 0px;
+		padding: 15px;
+		background-color: transparent;
+	}
+	.contact-content{
+		padding: 15px;
+		height: 130px;
+		font-size: 13px;
+		border: 7px double whitesmoke;
+	}
+
+	/* sobre */
+	.about-title{
+		position: relative;
+		top: 0px;
+		margin: 20px 0px 50px 0px;
+		text-align: center;
+	}
+	.about-title div{
+		display: inline-block;
+		font-weight: normal;
+		font-size: 24px !important;
+	}
+	.about-text{
+		padding: 35px 15px 15px 15px;
+		font-size: 14px;
+	}
+	.about-img{
+		padding: 0px;
+		width: 100%;
+	}
+
+	/* metas */
+	.metas-text{
+		padding: 15px;
+	}
 }
