@@ -1,60 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
 		
-		<title>NECCULT</title>
+		<?php include_once("head.php"); ?>
+		
+		<title><?echo $text['contato'];?> | NECCULT</title>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>		
-		<script type="text/javascript" src="js/main.js"></script>	
-
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">	
-
-	</head>
+	</head>	
 	<body>
 
 		<!--=== header ===-->
-		<header>
-			<div class="container">
-				<div class="row">
-
-					<!-- logo -->
-					<div class="col-md-3">
-						<img src="images/logo.png" class="logo"/>
-					</div>
-
-					<div class="col-md-9 text-right">
-						<ul class="custom-nav">
-
-							<li><a href="index.php"><div class="square"></div>Home</a></li>
-							<li><a href="sobre.php"><div class="square"></div>Sobre</a></li>
-							<li><a href="metas.php"><div class="square"></div>Metas</a></li>
-							<li><a href=""><div class="square"></div>Notícias</a></li>
-							<li class="active"><div class="square"></div>Contato</li>
-
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</header>
-
+		<?php
+			include_once("header.php");
+		?>
+		
 		<!--=== conteúdo ===-->
 		<div class="content">
 			<div class="container">
 				<div class="row">
 
 					<!-- image -->
-					<div class="col-md-6">
-						<div class="contact-img shadow-img">
-							<img src="images/contato.png">
-						</div>
+					<div class="col-sm-6 col-xs-12">
+						<div class="contact-img shadow-img"></div>
 					</div>
-					<div class="col-md-6 contact-container">
+					<div class="col-sm-6 col-xs-12 contact-container">
 						<div class="contact-content">
 
 							UFRGS | Faculdade de Ciências Econômicas, Anexo - Campus Centro 
@@ -79,6 +48,17 @@
 
 					</div>
 				</div>
+
+			</div>
+		</div>
+
+		<!-- idioma -->
+		<div class="idioma-content">
+			<div class="container text-center">
+						
+				<a href="contato.php?lang=pt" class="button">PT</a>
+				<a href="contato.php?lang=es" class="button">ES</a>
+				<a href="contato.php?lang=en" class="button">EN</a>
 
 			</div>
 		</div>
