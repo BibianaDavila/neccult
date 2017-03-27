@@ -4,7 +4,7 @@
 		
 		<?php include_once("head.php"); ?>
 		
-		<title><?echo $text['sobre'];?> | NECCULT</title>
+		<title><?php echo $text['sobre'];?> | NECCULT</title>
 		
 	</head>	
 	<body>
