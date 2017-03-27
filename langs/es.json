@@ -1,0 +1,29 @@
+{
+	"metas":"Metas",
+	"noticias":"Noticias",
+	"contato":"Contacto",
+	"sobre":"Sobre",
+
+	"paginaSobre-titulo":"<div>Estrutura</div><div class='small'>do</div><div class='big'>Neccult</div>",
+	"paginaSobre-texto": [
+		{"paragrafo":"Somos um ambiente interdisciplinar de ensino, pesquisa e extensão vinculado à Faculdade de Ciências Econômicas da UFRGS. O Núcleo surge da confluência de diferentes iniciativas convergentes no âmbito do estudo da Economia Criativa, Cultura e Inovação."},
+		{"paragrafo":"Mais especificamente, ele busca agregar os esforços dos trabalhos sendo desenvolvidos no âmbito do Observatório de Economia Criativa do RS, do Grupo de Trabalho em Economia Criativa, Cultura e Políticas Públicas do Centro de Estudos Internacionais sobre Governo e do grupo de pesquisa do CNPq em Economia Criativa, Cultura e Desenvolvimento."},
+		{"paragrafo":"O NECCULT pretende ser capaz de criar sinergia entre os vários interlocutores da área, funcionando, ao mesmo tempo, como ponto focal para os estudos na Universidade e referência nacional e internacional da área. Além de pesquisa aplicada, o Núcleo mantem diálogo com a comunidade por meio da Revista Eletrônica do NECCULT, do Curso de Inovação e Empreendedorismo em Indústrias Criativas e do ciclo de conferências Diálogos em Economia Criativa."}
+	],
+	"paginaSobre-botoes":[
+		{"titulo":"CEGOV","link":"http://www.ufrgs.br/cegov"},
+		{"titulo":"OBEC","link":"http://www.ufrgs.br/obec"},
+		{"titulo":"Diálogos","link":"http://www.ufrgs.br/obec/dialogos"},
+		{"titulo":"Curso","link":"http://www.ufrgs.br/obec/inovacao"},
+		{"titulo":"Revista","link":""}
+
+	],
+
+	"paginaMetas-texto":[
+		{"paragrafo":"O NECCULT atuará considerando quatro conjuntos de diretrizes relacionadas ao ensino, à pesquisa e à extensão: consolidação institucional, produção de conhecimento acadêmico, interação com a sociedade para a inovação e internacionalização. O foco principal permanece na pesquisa, mas, fundamentalmente, enquanto vetor para inovação social baseada no papel transformador da cultura e da criatividade."},
+		{"paragrafo":"DIRETRIZ 1 - Consolidação institucional: concluir o processo de institucionalização do NECCULT na UFRGS no prazo de três anos;"},
+		{"paragrafo":"DIRETRIZ 2 - Produção de conhecimento acadêmico: consolidar a reputação científica e institucional do NECCULT junto aos interlocutores da administração pública federal, estadual e municipal, bem como junto à sociedade civil e à comunidade universitária;"},
+		{"paragrafo":"DIRETRIZ 3 - Interação com a sociedade para a inovação: construir iniciativas – em parceria com a sociedade civil e os diferentes órgãos da Administração Pública – voltadas ao impulso da cultura e da criatividade na forma de ensino, pesquisa e extensão;"},
+		{"paragrafo":"DIRETRIZ 4 - Internacionalização: consolidar o processo de internacionalização do NECCULT, conforme diretrizes da UFRGS."}
+	]
+}
