@@ -1,48 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		
+		<?php include_once("head.php"); ?>
 		
 		<title>NECCULT</title>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>		
-		<script type="text/javascript" src="js/main.js"></script>	
-
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">	
-
-	</head>
+	</head>	
 	<body>
 
 		<!--=== header ===-->
-		<header>
-			<div class="container">
-				<div class="row">
-
-					<!-- logo -->
-					<div class="col-md-3">
-						<img src="images/logo.png" class="logo"/>
-					</div>
-
-					<div class="col-md-9 text-right">
-						<ul class="custom-nav">
-
-							<li class="active"><div class="square"></div>Home</li>
-							<li><a href="sobre.php"><div class="square"></div>Sobre</a></li>
-							<li><a href="metas.php"><div class="square"></div>Metas</a></li>
-							<li><a href=""><div class="square"></div>Notícias</a></li>
-							<li><a href="contato.php"><div class="square"></div>Contato</a></li>
-
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</header>
-
+		<?php
+			include_once("header.php");
+		?>
+		
 		<!--=== conteúdo ===-->
 		<div class="content">
 			<div class="container">
@@ -58,163 +29,71 @@
 								<li data-target="#newsCarousel" data-slide-to="1"></li>
 								<li data-target="#newsCarousel" data-slide-to="2"></li>
 								<li data-target="#newsCarousel" data-slide-to="3"></li>
+								<li data-target="#newsCarousel" data-slide-to="4"></li>
 							</ol>
 
 							<!-- wrapper for slides -->
 							<div class="carousel-inner" role="listbox">
 	    						
-	    						<div class="item active">
-	    							<div class="carousel-inner-item">
-	    								
-	    								<!-- background -->
-	    								<div class="carousel-bg">
-	    									<div class="row">
+	    						<?php
 
-	    										<!-- image -->
-	    										<div class="col-md-7">
-	    											<div class="carousel-wrapper-img">
-	    												<div class="carousel-img shadow-img">
-			    											<img src="images/teste.png">
-			    										</div>
-			    									</div>
-			    								</div>
+	    							$count = 0;
+	    							$images = Noticia::ImageDirectory();
 
-			    								<!-- texto -->
-			    								<div class="col-md-5">
-			    									<div class="carousel-title">
-			    										
-			    										CREATIVE EDGE PARTIES
+									foreach(Noticia::all() as $news){
 
-			    										<div class="separador"></div>
+										if ($count == 0){
+											echo "<div class='item active'>";
+										}else{
+											echo "<div class='item'>";
+										}
 
-			    									</div>
-			    									<div class="carousel-text">
-			    										
-			    										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali
-			    									
-			    									</div>
-			    									<div class="carousel-data">
-			    										22 de Março de 2017
-			    									</div>
-			    								</div>
-			    							</div>
-										</div>									
-									</div>
-	    						</div>
-	    						<div class="item">
-	    							<div class="carousel-inner-item">
-	    								
-	    								<!-- background -->
-	    								<div class="carousel-bg">
-	    									<div class="row">
+										echo "<a href='noticia.php?id=".$news->id."&titulo=".$news->titulo."' class='clean'/>";
+											echo "<div class='carousel-inner-item'>";
 
-	    										<!-- image -->
-	    										<div class="col-md-7">
-	    											<div class="carousel-wrapper-img">
-	    												<div class="carousel-img shadow-img">
-			    											<img src="images/teste.png">
-			    										</div>
-			    									</div>
-			    								</div>
+												echo "<div class='carousel-bg'>";
+													echo "<div class='row'>";
 
-			    								<!-- texto -->
-			    								<div class="col-md-5">
-			    									<div class="carousel-title">
-			    										
-			    										CREATIVE EDGE PARTIES
+													   echo "<div class='col-md-7 col-sm-6 col-xs-12'>";
 
-			    										<div class="separador"></div>
+														    echo "<div class='carousel-wrapper-img'>";
 
-			    									</div>
-			    									<div class="carousel-text">
-			    										
-			    										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali
-			    									
-			    									</div>
-			    									<div class="carousel-data">
-			    										22 de Março de 2017
-			    									</div>
-			    								</div>
-			    							</div>
-										</div>									
-									</div>
-	    						</div>
-	    						<div class="item">
-	    							<div class="carousel-inner-item">
-	    								
-	    								<!-- background -->
-	    								<div class="carousel-bg">
-	    									<div class="row">
+														    if(!empty($news->img)){
+																echo "<div class='carousel-img shadow-img' style=\"background-image:url('".$images.$news->img."')\"></div>";
+															
+															}else{
+																echo "<div class='carousel-img shadow-img' style=\"background-image:url('images/newsDefault.png')\"></div>";			
+															}
 
-	    										<!-- image -->
-	    										<div class="col-md-7">
-	    											<div class="carousel-wrapper-img">
-	    												<div class="carousel-img shadow-img">
-			    											<img src="images/teste.png">
-			    										</div>
-			    									</div>
-			    								</div>
+														    echo "</div>";
 
-			    								<!-- texto -->
-			    								<div class="col-md-5">
-			    									<div class="carousel-title">
-			    										
-			    										CREATIVE EDGE PARTIES
+													    echo "</div>";
+													    	
+													    echo "<div class='col-md-5 col-sm-6 col-xs-12'>";
+										
+															echo "<div class='carousel-title'><div class='inner ellipsis' data-ellipsis='3'>".$news->titulo."</div><div class='separador hidden-xs'></div></div>";
+				    										
+				    										echo "<div class='carousel-text hidden-xs'><div class='ellipsis' data-ellipsis='3'>".$news->texto."</div>...</div>";
 
-			    										<div class="separador"></div>
+				    										echo "<div class='carousel-data'>".$news->data."</div>";
 
-			    									</div>
-			    									<div class="carousel-text">
-			    										
-			    										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali
-			    									
-			    									</div>
-			    									<div class="carousel-data">
-			    										22 de Março de 2017
-			    									</div>
-			    								</div>
-			    							</div>
-										</div>									
-									</div>
-	    						</div>
-	    						<div class="item">
-	    							<div class="carousel-inner-item">
-	    								
-	    								<!-- background -->
-	    								<div class="carousel-bg">
-	    									<div class="row">
+				    									echo "</div>";
 
-	    										<!-- image -->
-	    										<div class="col-md-7">
-	    											<div class="carousel-wrapper-img">
-	    												<div class="carousel-img shadow-img">
-			    											<img src="images/teste.png">
-			    										</div>
-			    									</div>
-			    								</div>
+			    									echo "</div>";
+				    							echo "</div>";
+				    						echo "</a>";
 
-			    								<!-- texto -->
-			    								<div class="col-md-5">
-			    									<div class="carousel-title">
-			    										
-			    										CREATIVE EDGE PARTIES
+			    						echo "</div></div>";
 
-			    										<div class="separador"></div>
+			    						$count++;
 
-			    									</div>
-			    									<div class="carousel-text">
-			    										
-			    										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali
-			    									
-			    									</div>
-			    									<div class="carousel-data">
-			    										22 de Março de 2017
-			    									</div>
-			    								</div>
-			    							</div>
-										</div>									
-									</div>
-	    						</div>
+			    						if ($count == 5){
+
+											break;
+										}
+									}
+								?>
+								
 							</div>
 
 							<!-- left and right controls -->
@@ -231,6 +110,29 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- idioma -->
+		<div class="idioma-content">
+			<div class="container text-center">
+						
+				<a href="index.php?lang=pt" class="button">PT</a>
+				<a href="index.php?lang=es" class="button">ES</a>
+				<a href="index.php?lang=en" class="button">EN</a>
+
+			</div>
+		</div>
+
+		<script>
+			$('.item').css("display","block");
+			$('.ellipsis').ellipsis();
+		  	$('.item').removeAttr('style');	
+
+			$(window ).resize(function() {
+				$('.item').css("display","block");
+				$('.ellipsis').ellipsis();
+		  		$('.item').removeAttr('style');	
+			});
+		</script>
 
 	</body>
 </html>
