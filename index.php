@@ -39,8 +39,8 @@
 
 	    							$count = 0;
 	    							$images = Noticia::ImageDirectory();
-
-									foreach(Noticia::all() as $news){
+	    							
+									foreach(Noticia::news(5,0) as $news){
 
 										if ($count == 0){
 											echo "<div class='item active'>";
