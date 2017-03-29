@@ -354,6 +354,8 @@ li a:hover div.square{
 	border-bottom: 3px solid #66657d;
 }
 .social-links img{
+	background-color: #66657d;
+	border-radius: 10px;
 	width: 40px;
 }
 /*=== notícias ===*/
