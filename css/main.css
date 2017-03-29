@@ -25,7 +25,7 @@ body{
 	padding: 15px 0px 15px 0px;
 	box-shadow: 0px 5px 20px #939090;
 	background-color: #f5f5f5;
-	z-index: 10;
+	z-index: 20;
 }
 /* seleção */
 ::-moz-selection { /* Code for Firefox */
@@ -147,7 +147,8 @@ li a:hover div.square{
 
 /* carousel */
 .custom-carousel{
-	height: 350px;
+	height: 430px;
+	margin-bottom: 50px;
 }
 
 /* setas */
@@ -230,7 +231,7 @@ li a:hover div.square{
 
 /* indicadores */
 .carousel-indicators{
-	bottom: -85px;
+	bottom: 0px;
 }
 .carousel-indicators li{
 	border-radius: 0px;
@@ -495,9 +496,7 @@ li a:hover div.square{
 }
 
 @media only screen and (max-width: 991px){
-	body{
-		font-size: 10px;
-	}
+
 	ul.custom-nav li{
 		padding: 10px 15px 0px 15px;
 	}
@@ -523,9 +522,6 @@ li a:hover div.square{
 @media only screen and (max-width: 767px){
 	
 	/* geral */
-	.content, header{
-		min-width: 480px;
-	}
 	.shadow-img{
 		box-shadow: none;
 	}
@@ -606,7 +602,6 @@ li a:hover div.square{
 	}
 	.about-text{
 		padding: 35px 15px 15px 15px;
-		font-size: 14px;
 	}
 	.about-img{
 		padding: 0px;
@@ -616,5 +611,23 @@ li a:hover div.square{
 	/* metas */
 	.metas-text{
 		padding: 15px;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.cotent, header{
+		min-width: 320px;
+	} 
+	.button{
+	    font-size: 8px;
+	    margin: 0px 3px;
+	    padding: 5px 7px 5px 10px;
+	}
+	.col-xxs-12{
+		width: 100%;
+	}
+	ul.custom-nav li{
+		padding: 0px 6px;
+		font-size: 8px;
 	}
 }

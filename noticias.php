@@ -36,7 +36,7 @@
 								echo "<div class='new-page opened' id=\"".$pag."\">";
 							}
 							
-								echo "<div class='col-md-3 col-sm-4 col-xs-6'>";
+								echo "<div class='col-md-3 col-sm-4 col-xs-6 col-xxs-12'>";
 									echo "<a href='noticia.php?id=".$news->id."&titulo=".$news->titulo."' class='clean'/>";
 										echo "<div class='news-content'>";
 
