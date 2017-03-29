@@ -59,17 +59,22 @@
 			</div>
 		</div>
 
-		<!-- idioma -->
-		<div class="idioma-content">
-			<div class="container text-center">
-						
-				<p>
-					<a href="noticia.php?id=<?php echo $news->id?>&titulo=<?php echo $news->titulo?>&lang=pt" class="button">PT</a>
-					<a href="noticia.php?id=<?php echo $news->id?>&titulo=<?php echo $news->titulo?>&lang=es" class="button">ES</a>
-					<a href="noticia.php?id=<?php echo $news->id?>&titulo=<?php echo $news->titulo?>&lang=en" class="button">EN</a>
-				</p>
+		<!--=== footer ===-->
+		<footer>
 
+			<!-- idioma -->
+			<div class="idioma-content">
+				<div class="container text-center">
+						
+					<p>
+						<a href="noticia.php?id=<?php echo $news->id?>&titulo=<?php echo $news->titulo?>&lang=pt" class="button">PT</a>
+						<a href="noticia.php?id=<?php echo $news->id?>&titulo=<?php echo $news->titulo?>&lang=es" class="button">ES</a>
+						<a href="noticia.php?id=<?php echo $news->id?>&titulo=<?php echo $news->titulo?>&lang=en" class="button">EN</a>
+					</p>
+
+				</div>
 			</div>
-		</div>
+
+		</footer>
 	</body>
 </html>

@@ -10,10 +10,6 @@
 
 			<div class="col-md-9 col-sm-8 col-xs-12 text-right">
 
-				<?php
-					$page = basename(basename($_SERVER['SCRIPT_NAME']),'.php');
-				?>
-
 				<ul class="custom-nav">
 
 					<li class="<?php echo ($page == 'index' ? 'active' : ''); ?>"><a href="index.php"><div class="square"></div>Home</a></li>

@@ -94,15 +94,19 @@
 			</div>
 		</div>
 
-		<!-- idioma -->
-		<div class="idioma-content">
-			<div class="container text-center">
-					
-				<a href="noticias.php?page=<?php echo $pag?>&lang=pt" class="button">PT</a>
-				<a href="noticias.php?page=<?php echo $pag?>&lang=es" class="button">ES</a>
-				<a href="noticias.php?page=<?php echo $pag?>&lang=en" class="button">EN</a>
-				
+		<!--=== footer ===-->
+		<footer>
+
+			<!-- idioma -->
+			<div class="idioma-content">
+				<div class="container text-center">
+					<a href="noticias.php?page=<?php echo $pag?>&lang=pt" class="button">PT</a>
+					<a href="noticias.php?page=<?php echo $pag?>&lang=es" class="button">ES</a>
+					<a href="noticias.php?page=<?php echo $pag?>&lang=en" class="button">EN</a>
+				</div>
 			</div>
-		</div>
+
+		</footer>
+
 	</body>
 </html>

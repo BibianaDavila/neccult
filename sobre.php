@@ -93,16 +93,10 @@
 			</div>
 		</div>
 
-		<!-- idioma -->
-		<div class="idioma-content">
-			<div class="container text-center">
-						
-				<a href="index.php?lang=pt" class="button">PT</a>
-				<a href="index.php?lang=es" class="button">ES</a>
-				<a href="index.php?lang=en" class="button">EN</a>
-				
-			</div>
-		</div>
+		<!--=== footer ===-->
+		<?php
+			include_once("footer.php");
+		?>
 		
 		<script type="text/javascript" src="js/jquery.zoom.min.js"></script>
 		<script>

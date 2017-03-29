@@ -52,15 +52,9 @@
 			</div>
 		</div>
 
-		<!-- idioma -->
-		<div class="idioma-content">
-			<div class="container text-center">
-						
-				<a href="contato.php?lang=pt" class="button">PT</a>
-				<a href="contato.php?lang=es" class="button">ES</a>
-				<a href="contato.php?lang=en" class="button">EN</a>
-
-			</div>
-		</div>
+		<!--=== footer ===-->
+		<?php
+			include_once("footer.php");
+		?>
 	</body>
 </html>

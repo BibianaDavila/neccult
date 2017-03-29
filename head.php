@@ -2,6 +2,7 @@
 	require_once("Includes.php");
 
 	global $idioma;
+    global $page;
 
     /* mudou idioma na url */
     if (!empty($_GET["lang"])){
@@ -42,6 +43,8 @@
 
     $text = json_decode($json, true);
 
+   
+    $page = basename(basename($_SERVER['SCRIPT_NAME']),'.php');
 ?>
 
 
