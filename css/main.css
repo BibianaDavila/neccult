@@ -503,7 +503,8 @@ li a:hover div.square{
 @media only screen and (max-width: 991px){
 
 	ul.custom-nav li{
-		padding: 10px 15px 0px 15px;
+		padding: 10px 8px 0px 8px;
+		font-size: 11px;
 	}
 	.fluid-img{
 		padding: 0px 25px;
@@ -632,7 +633,7 @@ li a:hover div.square{
 		width: 100%;
 	}
 	ul.custom-nav li{
-		padding: 0px 6px;
+		padding: 0px 5px;
 		font-size: 8px;
 	}
 	.links-list{
