@@ -9,13 +9,12 @@
 			</div>
 
 			<div class="col-md-9 col-sm-8 col-xs-12 text-right">
-				<ul class="custom-nav">
 
-					<?php
-						$url_complete = $_SERVER['REQUEST_URI'];
-						$url = explode('/', $url_complete);
-						$page = basename($url[sizeof($url)-1], '.php');
-					?>
+				<?php
+					$page = basename(basename($_SERVER['SCRIPT_NAME']),'.php');
+				?>
+
+				<ul class="custom-nav">
 
 					<li class="<?php echo ($page == 'index' ? 'active' : ''); ?>"><a href="index.php"><div class="square"></div>Home</a></li>
 					<li class="<?php echo ($page == 'sobre' ? 'active' : ''); ?>"><a href="sobre.php"><div class="square"></div><?php echo $text['sobre']?></a></li>
